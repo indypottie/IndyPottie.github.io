@@ -2,39 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Under Construction</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-      flex-direction: column;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-
-    .emoji {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indy Pottie's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <h1>Site Under Construction</h1>
-  <p>Thanks for visiting! This portfolio is currently being built.<br />Please check back soon.</p>
+  <header>
+    <div class="container">
+      <h1>Indy Pottie</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="assets/resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <h2>Welcome to my Portfolio</h2>
+      <p>I'm a game developer with a passion for systems programming, AI, and game engine architecture.</p>
+      <a class="btn" href="#projects">View Projects</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi! I'm Indy, a game development student with a degree in Informatics. I specialize in C++, Unreal Engine, and AI systems. This site showcases some of the work I'm most proud of.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+
+        <!-- <div class="project-card">
+          <img src="assets/images/zombiee_ai.png" alt="test project 1" onerror="this.onerror=null; this.src='assets/images/placeholder.jpg';">
+          <div class="project-content">
+            <h3>Zombie Survival AI</h3>
+            <p>GOAP and Steering AI system for a survival game. Includes behavior trees and realistic decision-making.</p>
+            <a href="https://github.com/indypottie/Prog4-Exam-Bomberman.git" target="_blank">View on GitHub</a>
+          </div>
+        </div> -->
+
+        <!-- Add more .project-card blocks here -->
+        <div class="project-card">
+          <img src="assets/images/zombie_ai.png" alt="test project 2" onerror="this.onerror=null; this.src='assets/images/placeholder.jpg';">
+          <div class="project-content">
+            <h3>Zombie Survival AI</h3>
+            <p>GOAP and Steering AI system for a survival game. Includes behavior trees and realistic decision-making.</p>
+            <a href="https://github.com/indypottie/GOAP_AI.git" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/images/prog4_Engine.png" alt="Bomberman in custom 2D engine" onerror="this.onerror=null; this.src='assets/images/placeholder.jpg';">
+          <div class="project-content">
+            <h3>Bomberman - Built in My Own 2D Engine</h3>
+            <p>
+              A fully playable Bomberman clone created for my Programming 4 exam using my custom-built <strong>Minigin</strong> engine in C++. 
+              Features include custom rendering, input handling, collision detection, and game object management.
+            </p> 
+            <a href="https://github.com/indypottie/Prog4-Exam-Bomberman" target="_blank">View on GitHub</a> 
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Feel free to reach out through any of the platforms below.</p>
+
+    <div class="contact-links">
+      <a href="mailto:indy.pottie@gmail.com" class="contact-item" target="_blank">
+        <img src="assets/icons/email.svg" alt="Email Icon" />
+        indy.pottie@gmail.com
+      </a>
+      <a href="tel:+32412345678" class="contact-item">
+        <img src="assets/icons/phone.svg" alt="Phone Icon" />
+        +32 412 34 56 78
+      </a>
+      <a href="https://github.com/indypottie" class="contact-item" target="_blank">
+        <img src="assets/icons/github.svg" alt="GitHub Icon" />
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/indy-pottie-76515b26a/" class="contact-item" target="_blank">
+        <img src="assets/icons/linkedin.svg" alt="LinkedIn Icon" />
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Indy Pottie. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
