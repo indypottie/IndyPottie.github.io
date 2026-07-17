@@ -12,7 +12,7 @@ The website features an Unreal Engine-inspired interface and highlights my proje
 
 ## Preview
 
-![Portfolio Homepage](assets/readme/homepage.png)
+![Portfolio Homepage](/src/assets/readme/homepage.png)
 
 ```text
 assets/readme/homepage.png
