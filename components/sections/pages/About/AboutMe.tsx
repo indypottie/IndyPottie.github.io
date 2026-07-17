@@ -1,5 +1,6 @@
 import Container from "../../../ui/Container";
 import EditorPanel from "../../../ui/EditorPanel/EditorPanel";
+import Portrait from "../../../../src/assets/Portrait/Portrait.png";
 
 import { about } from "../../../../data/About";
 
@@ -51,15 +52,22 @@ export default function AboutMe() {
                                 flex
                                 items-center
                                 justify-center
-                                rounded-xl
-                                border
-                                border-zinc-800
-                                bg-zinc-900/40
-                                min-h-[420px]
                             "
                         >
 
-                            Portrait Placeholder
+                            <img
+                                src={Portrait}
+                                alt="Portrait of Indy Pottie"
+                                className="
+                                    w-full
+                                    max-w-md
+                                    rounded-xl
+                                    border
+                                    border-zinc-800
+                                    object-cover
+                                    shadow-lg
+                                "
+                            />
 
                         </div>
 

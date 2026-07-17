@@ -4,6 +4,7 @@ import SectionHeader from "../../../components/ui/SectionHeader/SectionHeader";
 import ProjectCard from "../../../components/project/ProjectCard";
 
 import { projects } from "../../../data/Projects";
+import LinkButton from "../../ui/LinkButton";
 
 export default function Projects() {
 
@@ -23,19 +24,30 @@ export default function Projects() {
 
             <div className="grid gap-8 lg:grid-cols-2">
 
-            {projects
-                .filter(project => project.featured)
-                .map(project => (
+                {projects
+                    .filter(project => project.featured)
+                    .map(project => (
 
-                    <ProjectCard
+                        <ProjectCard
 
-                        key={project.id}
+                            key={project.id}
 
-                        project={project}
+                            project={project}
 
-                    />
+                        />
 
-            ))}
+                    ))}
+
+            </div>
+
+            <div className="mt-10 flex justify-center">
+
+                <LinkButton
+                    href="/projects"
+                    variant="filled"
+                >
+                    View All Projects
+                </LinkButton>
 
             </div>
 
