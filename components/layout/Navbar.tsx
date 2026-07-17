@@ -164,7 +164,7 @@ export default function Navbar() {
 
                     <LinkButton
 
-                        href="/#contact"
+                        to="/#contact"
 
                         variant="outlined"
 
