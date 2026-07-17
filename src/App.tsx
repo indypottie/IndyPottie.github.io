@@ -10,6 +10,8 @@ import {
 
 import Layout from "../components/layout/Layout";
 
+import ScrollToTop from "../components/ScrollToTop";
+
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import Experience from "../pages/Experience";
@@ -21,6 +23,8 @@ export default function App() {
     return (
 
         <BrowserRouter>
+
+            <ScrollToTop />
 
             <Routes>
 
