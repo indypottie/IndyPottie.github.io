@@ -24,29 +24,33 @@ export default function Projects() {
 
             <div className="grid gap-8 lg:grid-cols-2">
 
-                {projects
-                    .filter(project => project.featured)
-                    .map(project => (
+            {projects
+                .filter(project => project.featured)
+                .map(project => (
 
-                        <ProjectCard
+                    <ProjectCard
 
-                            key={project.id}
+                        key={project.id}
 
-                            project={project}
+                        project={project}
 
-                        />
+                    />
 
-                    ))}
+            ))}
 
             </div>
 
-            <div className="mt-10 flex justify-center">
+            <div className="mt-12 flex flex-col items-center gap-4">
+
+                <p className="text-sm text-zinc-500">
+                    Looking for more?
+                </p>
 
                 <LinkButton
-                    href="/projects"
+                    to="/projects"
                     variant="filled"
                 >
-                    View All Projects
+                    View all projects
                 </LinkButton>
 
             </div>

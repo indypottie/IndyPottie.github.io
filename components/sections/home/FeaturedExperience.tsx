@@ -137,7 +137,7 @@ export default function Experience() {
 
                             <div className="flex justify-end">
 
-                                <LinkButton href="/experience">
+                                <LinkButton to="/experience">
 
                                     View Full Experience
 
