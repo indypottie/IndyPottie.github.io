@@ -19,17 +19,15 @@ export default function ProjectThumbnail({
 
         <div
             className={`
+                relative
                 mt-8
+                overflow-hidden
                 rounded-lg
                 border
                 border-zinc-800
                 bg-zinc-900
 
-                ${
-                    large
-                        ? "aspect-video"
-                        : "aspect-[16/10]"
-                }
+                ${large ? "aspect-video" : "aspect-[16/10]"}
             `}
         >
 
@@ -37,7 +35,14 @@ export default function ProjectThumbnail({
                 ? <img
                     src={project.thumbnail}
                     alt={project.title}
-                    className="h-full w-full rounded-lg object-cover"
+                    className="
+                        absolute
+                        inset-0
+                        h-full
+                        w-full
+                        object-cover
+                        object-center
+                    "
                 />
                 : "Preview"}
 

@@ -31,15 +31,15 @@ export default function ProjectActions({
                 </LinkButton>
             }
 
-            {project.demo &&
+            {project.release &&
 
                 <LinkButton
-                    href={project.demo}
+                    href={project.release}
                     external
                     variant="filled"
                     icon={<FiPlay />}
                 >
-                    Demo
+                    Release
                 </LinkButton>
             }
 

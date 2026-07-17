@@ -16,6 +16,7 @@ export default function Button({
 
     const baseClasses = `
         inline-flex
+        cursor-pointer
         items-center
         justify-center
         gap-2

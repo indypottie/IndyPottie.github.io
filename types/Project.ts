@@ -25,6 +25,6 @@ export interface Project {
 
     github?: string;
 
-    demo?: string;
+    release?: string;
 
 }
