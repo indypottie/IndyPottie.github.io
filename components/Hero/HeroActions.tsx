@@ -18,7 +18,7 @@ export default function HeroActions() {
 
             <Button
                 variant="outlined"
-                onClick={() => window.open("/resume.pdf", "_blank")}
+                onClick={() => window.open("/IndyPottieResume.pdf", "_blank")}
             >
                 View Resume
             </Button>
