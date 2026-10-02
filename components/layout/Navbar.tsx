@@ -55,7 +55,7 @@ export default function Navbar() {
 
                 <Link
 
-                    to="/#hero"
+                    to="/"
 
                     className={`
                         group
