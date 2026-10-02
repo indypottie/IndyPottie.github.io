@@ -11,7 +11,7 @@ export default function Home() {
 
     return (
 
-        <Page>
+        <Page className="pt-0">
 
             <Reveal>
 

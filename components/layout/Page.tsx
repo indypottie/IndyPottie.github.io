@@ -1,37 +1,26 @@
 import type { ReactNode } from "react";
 
 interface PageProps {
-
     children: ReactNode;
-
+    className?: string;
 }
 
 export default function Page({
-
     children,
-
+    className = "",
 }: PageProps) {
 
     return (
-
         <main
-
-            className="
+            className={`
                 relative
                 z-10
-                mx-auto
-                max-w-7xl
-                px-8
                 pt-36
                 pb-32
-            "
-
+                ${className}
+            `}
         >
-
             {children}
-
         </main>
-
     );
-
 }
