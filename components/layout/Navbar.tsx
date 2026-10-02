@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 
 import {
-
     Link,
-
     NavLink,
+    useLocation,
 } from "react-router-dom";
 
 import LinkButton from "../ui/LinkButton";
@@ -14,7 +13,8 @@ import { navigation } from "../../data/Navigation";
 export default function Navbar() {
 
     const [scrolled, setScrolled] = useState(false);
-
+    const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
     useEffect(() => {
 
         function handleScroll() {
@@ -51,7 +51,7 @@ export default function Navbar() {
 
         >
 
-            <nav className="mx-auto flex h-22 max-w-7xl items-center justify-between px-8">
+            <nav className="relative mx-auto flex h-22 max-w-7xl items-center justify-between px-6 lg:px-8">
 
                 <Link
 
@@ -123,8 +123,9 @@ export default function Navbar() {
                     </div>
 
                 </Link>
-
-                <div className="flex items-center gap-8">
+                
+                {/* navbar for desktop */}
+                <div className="hidden items-center gap-8 lg:flex">
 
                     <ul className="flex items-center gap-8">
 
@@ -175,6 +176,88 @@ export default function Navbar() {
                     </LinkButton>
 
                 </div>
+
+                {/* navbar button mobile */}
+                <button 
+                        type="button"
+                        onClick={() => setMenuOpen(prev => !prev)}
+                    className="
+                        flex
+                        h-10
+                        w-10
+                        items-center
+                        justify-center
+                        rounded
+                        border
+                        border-zinc-800
+                        bg-zinc-950/60
+                        text-zinc-300
+                        transition-colors
+                        hover:border-zinc-700
+                        hover:text-blue-400
+                        lg:hidden
+                    "
+                    aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+                    aria-expanded={menuOpen}
+                >
+                    {menuOpen ? "x" : "☰"}
+                </button>
+                
+                {/* navbar for mobile */}
+                {menuOpen && (
+                    <div
+                        className="
+                            absolute
+                            inset-x-0
+                            top-full
+                            border-b
+                            border-zinc-800
+                            bg-zinc-950/95
+                            backdrop-blur-xl
+                            lg:hidden
+                        "
+                    >
+                        <div className="mx-auto max-w-7xl px-6 py-6">
+                            <ul className="space-y-2">
+                                {navigation.map(item => (
+                                    <li key={item.label}>
+                                        <NavLink
+                                            to={item.href}
+                                            onClick={() => setMenuOpen(false)}
+                                            className={({ isActive }) => `
+                                                block
+                                                border-1-2
+                                                px-4
+                                                py-3
+                                                text-sm
+                                                font-medium
+                                                uppercase
+                                                tracking-wider
+                                                transition-colors
+                                                ${
+                                                    isActive
+                                                        ? "border-blue-500 text-blue-400"
+                                                        : "border-transparent text-zinc-400 hover:border-zinc-700 hover:text-zinc-200"
+                                                }
+                                            `}
+                                        >
+                                            {item.label}
+                                        </NavLink>
+                                    </li>
+                                ))}
+                            </ul>
+                            <div className="my-5 h-px bg-zinc-800" />
+                            <LinkButton
+                                to="/#contact"
+                                variant="outlined"
+                                className="w-full justify-center"
+                                onClick={() => setMenuOpen(false)}
+                            >
+                                Contact
+                            </LinkButton>
+                        </div>
+                    </div>
+                )}
 
             </nav>
 
