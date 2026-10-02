@@ -7,7 +7,7 @@ export default function HeroActions() {
     const navigate = useNavigate();
 
     return (
-        <div className="mt-12 flex gap-4">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4 lg:mt-12">
 
             <Button
                 variant="outlined"

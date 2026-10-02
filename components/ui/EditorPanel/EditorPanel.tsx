@@ -26,6 +26,10 @@ export default function EditorPanel({
             className="
                 group
 
+                w-full
+
+                min-w-0
+
                 overflow-hidden
 
                 rounded-xl

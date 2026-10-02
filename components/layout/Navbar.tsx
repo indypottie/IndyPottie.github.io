@@ -226,7 +226,7 @@ export default function Navbar() {
                                             onClick={() => setMenuOpen(false)}
                                             className={({ isActive }) => `
                                                 block
-                                                border-1-2
+                                                border-l-2
                                                 px-4
                                                 py-3
                                                 text-sm

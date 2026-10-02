@@ -9,10 +9,12 @@ export default function HeroHeadline() {
 
             <h1
                 className="
-                mt-6
-                text-7xl
+                mt-4
+                text-6xl
                 font-black
                 leading-none
+                sm:text-7xl
+                lg:mt-6
                 lg:text-8xl
                 "
             >

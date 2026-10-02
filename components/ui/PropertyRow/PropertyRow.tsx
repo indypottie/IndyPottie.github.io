@@ -22,23 +22,16 @@ export default function PropertyRow({
 
             className="
                 group
-
                 flex
-
+                min-w-0
                 items-center
-
                 justify-between
-
+                gap-4
                 border-b
-
                 border-zinc-800
-
                 py-4
-
                 transition-colors
-
                 duration-200
-
                 hover:border-blue-500/20
             "
 
@@ -65,14 +58,14 @@ export default function PropertyRow({
             <span
 
                 className="
+                    min-w-0
+                    max-w-[80%]
+                    break-words
+                    text-right
                     font-medium
-
                     text-white
-
                     transition-all
-
                     duration-200
-
                     group-hover:translate-x-1
                 "
 

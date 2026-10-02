@@ -8,7 +8,7 @@ export default function EditorPanelBody({
     children,
 }: EditorPanelBodyProps) {
     return (
-        <div className="p-6">
+        <div className="p-2 sm:p-6">
             {children}
         </div>
     );

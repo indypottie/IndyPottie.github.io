@@ -4,7 +4,7 @@ import HeroActions from "./HeroActions";
 
 export default function HeroContent() {
     return (
-        <div className="flex flex-col justify-center">
+        <div className="min-w-0 flex flex-col justify-center lg:pr-8">
 
             <HeroHeadline />
 
